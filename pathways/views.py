@@ -15,6 +15,9 @@ def destination(request):
 def logo(request):
     return render(request, 'index.html')
 
+def test(request):
+    return render(request, 'test.html')
+
 def contact_us(request):
     if request.method=="POST":
         name=request.POST.get('name')
