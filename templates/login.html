@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{%extends 'template.html'%}
+<html>
+  {%block head%}
+<head>
+<link rel="stylesheet" href="https://pathwaydevopsstorage.blob.core.windows.net/staticcontent/login.css?sv=2021-06-08&ss=b&srt=o&sp=rtfx&se=2023-12-06T00:18:46Z&st=2022-12-05T16:18:46Z&spr=https&sig=%2FILkyq8yaCY80FRIhS8aXCxan%2B8wR1sI5V6LW6qOVo4%3D">
+<title> Login </title>
+{%endblock head%}
+</head>
+  <body>
+    {%block body%}
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <form class="login-form" action ="/login" method ="POST">
+          {% csrf_token%}
+          <input type="text" id = "fname" name = "fname" placeholder="username"/>
+          <input type="password" id = "pswd" name= "pswd" placeholder="password"/>
+          <button type="submit" class="btn" style="background: #dfbd9f;">Log In</button>
+          <p class="message">Not registered? <a href="/signUp">Create an account</a></p>
+        </form>
+      </div>
+    </div>
+{%endblock body%}
+</body>
+</html>
