@@ -18,7 +18,7 @@ urlpatterns = [
     path("tbooking", views.tbooking, name="tbooking"),
     path("signUp", views.signUp, name="signUp"),
     path('logout',views.logoutuser, name="logout"),
-    path('test',views.test, name="test")
+    
 
 
 
